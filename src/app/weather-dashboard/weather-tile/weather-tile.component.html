@@ -1,0 +1,32 @@
+<div class="container">
+  <i class="fa fa-trash" aria-hidden="true" (click)="removeCity.emit()"></i>
+  
+  <p-dropdown [options]="weatherConditions" [(ngModel)]="selectedCondition" [style]="{'min-width':'80px'}"></p-dropdown>
+
+  <p class="location">
+
+    {{ forecast.city }}
+    
+    <span class="country">{{ forecast.country }}</span>
+  
+  </p>
+  
+    
+  <div class="days-row">
+    <ng-container 
+      *ngFor="let day of forecast.forecast; let last = last"
+    >
+      
+      <daily-forecast
+        [day]="day"
+        [condition]="selectedCondition"
+      ></daily-forecast>
+
+      <div 
+        class="border" 
+        *ngIf="!last"
+      ></div>
+  
+    </ng-container>
+  </div>
+</div>

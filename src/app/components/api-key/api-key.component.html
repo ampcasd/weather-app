@@ -1,0 +1,24 @@
+<div class="container">
+
+  <h3>Specify API Key</h3>
+  
+  <span class="ui-float-label">
+      <input 
+        id="float-input"
+        type="text" 
+        size="30" 
+        pInputText
+        [(ngModel)]="key"
+        class="ui-inputtext ui-corner-all ui-state-default ui-widget"> 
+      <label for="float-input">Your unique key</label>
+  </span>
+  
+  <div *ngIf="displayError" class="ui-message ui-messages-error">
+    This field must be populated.
+  </div>
+
+  <button mat-raised-button
+    (click)="addKey()"
+  >Confirm</button>
+
+</div>

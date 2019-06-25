@@ -1,0 +1,18 @@
+<h4>Select the city to track.</h4>
+<mat-form-field>
+  <mat-label>City</mat-label>
+  <mat-select       
+    (openedChange)="refeedCities($event)"
+    (selectionChange)="selectedCity = $event"
+  >
+    <mat-option *ngFor="let city of viewCities"
+      [value]="city"
+    >
+      {{ city.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-raised-button
+  (click)="addCity()"
+>Confirm</button>

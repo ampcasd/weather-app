@@ -1,0 +1,21 @@
+.temperature {
+  font-size: 2em;
+}
+
+.wind {
+  font-size: 1.5em;
+}
+
+.temperature, .description, .wind, .wind-speed, .wind-degree {
+  text-align: center;
+}
+
+.description {
+  font-style: italic;
+  margin-top: 0;
+}
+
+img {
+  display: flex;
+  margin: 0 auto;
+}

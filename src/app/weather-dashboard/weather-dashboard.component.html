@@ -1,0 +1,4 @@
+<weather-tile *ngFor="let weather of cityWeather | keyvalue"
+  [forecast]="weather.value"
+  (removeCity)="removeCity(weather.key)"
+></weather-tile>

@@ -1,0 +1,12 @@
+<h4>Start typing the name of the city to track.</h4>
+
+<p-autoComplete 
+  [(ngModel)]="selectedCity" 
+  [suggestions]="searchResults" 
+  field="name"
+  (completeMethod)="search($event)"
+></p-autoComplete>
+
+<button mat-raised-button
+  (click)="addCity()"
+>Confirm</button>

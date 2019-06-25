@@ -1,0 +1,19 @@
+<p class="date">{{ day.date | date:'EEEE, d LLL' }}</p>
+
+<p class="temperature" *ngIf="condition == conditions.heat; else wind">
+  {{ day.temp_min }} - {{ day.temp_max }} °C
+</p>
+
+<img [src]="'http://openweathermap.org/img/w/' + day.icon + '.png'" alt="weather icon">
+
+<p class="description">{{ day.description }}</p>
+
+<ng-template #wind>
+  
+  <p class="wind">Wind:</p>
+
+  <p class="wind-speed">speed: {{ day.wind.speed }}</p>
+
+  <p class="wind-degree">degree: {{ day.wind.degree }}</p>
+
+</ng-template>

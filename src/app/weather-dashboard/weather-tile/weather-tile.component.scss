@@ -1,0 +1,70 @@
+.container, daily-forecast {
+  background-color: #e91e63;
+  padding: 20px;
+  margin: 25px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 45px auto;
+}
+
+daily-forecast {
+  display: inline-block;
+}
+
+.days-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.day {
+  width: 150px;
+}
+
+i {
+  display: block;
+  float: right;
+  color: white;
+  font-size: 25px;
+}
+
+p-dropdown {
+  float: right;
+  margin: 0 20px;
+}
+
+i.fa.fa-trash::before {
+  cursor: pointer;
+}
+
+.location {
+  font-size: 2em;
+}
+
+.country {
+  font-size: 0.5em;
+  display: block;
+}
+
+.border {
+  height: 110px;
+  top: 65px;
+  border-right: 2px solid beige;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  position: relative;
+  bottom: 60px;
+}
+
+@media only screen and (max-width: 990px) {
+  .days-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .border {
+    display: none;
+  }
+}

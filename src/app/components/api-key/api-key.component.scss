@@ -1,0 +1,27 @@
+.container {
+  width: fit-content;
+  margin: 20vh auto;
+  h3 {
+    margin: 25px 0;
+  }
+    
+  .ui-message.ui-messages-error {
+    margin: 10px auto;
+    width: fit-content;
+    display: block;
+  }
+}
+
+::ng-deep ui-float-label {
+  margin: 25px 0;
+}
+
+button {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+#float-input {
+  width: 320px;
+}

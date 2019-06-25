@@ -1,0 +1,15 @@
+<h4>Select the city to track.</h4>
+
+<p-dropdown 
+  [options]="cities" 
+  optionLabel="name"
+  editable="true"
+  placeholder="Select city"
+  [virtualScroll]="true"
+  [(ngModel)]="selectedCity" 
+  itemSize="30"
+></p-dropdown>
+
+<button mat-raised-button
+  (click)="addCity()"
+>Confirm</button>
