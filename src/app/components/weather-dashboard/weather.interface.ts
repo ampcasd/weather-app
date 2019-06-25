@@ -1,4 +1,4 @@
-import { City } from '../components/city-selector/city.interface';
+import { City } from '../city-selector/city.interface';
 
 export interface WeatherForecast {
   city: string;

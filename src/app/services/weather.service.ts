@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { WeatherResponse } from '../weather-dashboard/weather.interface';
+import { WeatherResponse } from '../components/weather-dashboard/weather.interface';
+
 
 @Injectable({
   providedIn: 'root'

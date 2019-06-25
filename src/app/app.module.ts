@@ -9,13 +9,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
-import { WeatherDashboardModule } from './weather-dashboard/weather-dashboard.module';
 import { CityState } from './state/city.state';
 import { ApiState } from './state/api.state';
 import { ApiKeyModule } from './components/api-key/api-key.module';
 import { NewCitySelectorModule } from './components/new-city-selector/new-city-selector.module';
 import { CitySelectorModule } from './components/city-selector/city-selector.module';
 import { NewestCitySelectorModule } from './components/newest-city-selector/newest-city-selector.module';
+import { WeatherDashboardModule } from './components/weather-dashboard/weather-dashboard.module';
 
 @NgModule({
   declarations: [

@@ -2,12 +2,12 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { Observable, of, Subscription } from 'rxjs';
 
-import { CityChange } from '../components/city-selector/city.interface';
-import { AppState } from '../state/app-state.interface';
-import { WeatherService } from '../services/weather.service';
 import { WeatherResponse, Day, WeatherSummary, WeatherForecast } from './weather.interface';
-import { DecreaseLimit } from '../actions/api.action';
-import { UpdateCities } from '../actions/city.action';
+import { CityChange } from '../city-selector/city.interface';
+import { WeatherService } from 'src/app/services/weather.service';
+import { AppState } from 'src/app/state/app-state.interface';
+import { DecreaseLimit } from 'src/app/actions/api.action';
+import { UpdateCities } from 'src/app/actions/city.action';
 
 type CityId = number;
 
@@ -31,62 +31,6 @@ export class WeatherDashboardComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-
-    this.cityWeather.set(1, {
-      city: 'string',
-      country: 'string',
-      forecast: [{
-        date: new Date(1561636800 * 1000),
-        temp_min: '2',
-        temp_max: '3',
-        icon: '01d',
-        description: 'windy',
-        wind: {
-          speed: 200,
-          deg: 180
-        }
-      }, {
-        date: new Date(1561636800 * 1000),
-        temp_min: '2',
-        temp_max: '3',
-        icon: '01d',
-        description: 'windy',
-        wind: {
-          speed: 200,
-          deg: 180
-        }
-      }, {
-        date: new Date(1561636800 * 1000),
-        temp_min: '2',
-        temp_max: '3',
-        icon: '01d',
-        description: 'windy',
-        wind: {
-          speed: 200,
-          deg: 180
-        }
-      }, {
-        date: new Date(1561636800 * 1000),
-        temp_min: '2',
-        temp_max: '3',
-        icon: '01d',
-        description: 'windy',
-        wind: {
-          speed: 200,
-          deg: 180
-        }
-      }, {
-        date: new Date(1561636800 * 1000),
-        temp_min: '2',
-        temp_max: '3',
-        icon: '01d',
-        description: 'windy',
-        wind: {
-          speed: 200,
-          deg: 180
-        }
-      }]
-    });
 
     this.storeSubscription = this.store.select((state: AppState) => state)
       .subscribe((state: AppState) => {

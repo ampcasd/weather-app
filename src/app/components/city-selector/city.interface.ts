@@ -1,4 +1,4 @@
-import { Coord } from '../../weather-dashboard/weather.interface';
+import { Coord } from '../weather-dashboard/weather.interface';
 
 export interface City {
   id: number;
